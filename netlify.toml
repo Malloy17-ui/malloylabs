@@ -1,0 +1,16 @@
+# Netlify configuration for malloylabs.net
+
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Ensure the delivery files are bundled with the stripe-webhook function
+# so they're readable at runtime via fs.readFileSync.
+[functions."stripe-webhook"]
+  included_files = [
+    "netlify/functions/liquidity-sweep-mapper-v2.txt",
+    "netlify/functions/readme.txt"
+  ]
