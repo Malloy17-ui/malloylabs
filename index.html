@@ -500,6 +500,30 @@
             height: auto;
         }
 
+        .demo-frame {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.75rem;
+        }
+
+        .demo-frame img {
+            border-radius: 3px;
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .demo-caption {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            color: var(--text-dim);
+            margin-top: 0.9rem;
+            padding: 0 0.5rem;
+        }
+
         /* ============ HOW IT WORKS ============ */
         .process-grid {
             display: grid;
@@ -885,6 +909,28 @@
 
     <div class="sep"><hr></div>
 
+    <!-- CLIENT WORK (bespoke proof) -->
+    <section id="clientwork">
+        <div class="reveal">
+            <div class="sect-label">client work →</div>
+            <h2>bespoke builds, <strong>in public.</strong></h2>
+            <p class="sect-desc">recent custom work.</p>
+        </div>
+
+        <div class="reveal">
+            <div class="testimonials">
+                <div class="testimonial">
+                    <img src="testimonial-1.png" alt="TrapDefi — playing with this indicator built for me by @MalloyAlgos, showing active sweep zones on BTCUSD chart">
+                </div>
+                <div class="testimonial">
+                    <img src="testimonial-2.png" alt="TrapDefi — test trade executed flawlessly, +29.60% BTC long position">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="sep"><hr></div>
+
     <!-- ENTRY POINT (MAPPER) -->
     <section class="entry-section" id="mapper">
         <div class="entry-header reveal">
@@ -894,7 +940,7 @@
         </div>
 
         <div class="entry-card reveal">
-            <p class="entry-card-lead">the <strong>liquidity sweep mapper v2</strong> is the one build general enough to ship as-is. same code running on the chart in the hero. same code behind every public trade on @MalloyAlgos. maps active sweep zones, swept levels, and trend state in real time — trades the sweep rather than the level.</p>
+            <p class="entry-card-lead">the <strong>liquidity sweep mapper v2</strong> is the one build general enough to ship as-is. same code behind every public trade on @MalloyAlgos. maps active sweep zones, swept levels, and trend state in real time — trades the sweep rather than the level.</p>
 
             <ul class="entry-includes">
                 <li>full Pine Script v5 source (.txt)</li>
@@ -912,14 +958,10 @@
         </div>
 
         <div class="reveal">
-            <div class="entry-social-label">operators using it →</div>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="testimonial-1.png" alt="TrapDefi — playing with this indicator built for me by @MalloyAlgos, showing active sweep zones on BTCUSD chart">
-                </div>
-                <div class="testimonial">
-                    <img src="testimonial-2.png" alt="TrapDefi — test trade executed flawlessly, +29.60% BTC long position">
-                </div>
+            <div class="entry-social-label">live on chart →</div>
+            <div class="demo-frame">
+                <img src="mapper-demo.png" alt="Liquidity Sweep Mapper v2 running on BTCUSD 2H — showing active sweep zones, EMA levels, SELL signal, and the live status panel">
+                <div class="demo-caption">BTCUSD · 2H · mapper running live</div>
             </div>
         </div>
     </section>
