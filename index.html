@@ -1002,53 +1002,73 @@
 
     <div class="sep"><hr></div>
 
-    <!-- APPLY -->
-    <section id="apply">
+   <!-- APPLY -->
+<section id="apply">
+    <div class="reveal">
+        <div class="sect-label">apply</div>
+        <h2>tell me about <strong>your trading.</strong></h2>
+    </div>
+    <div class="apply-grid">
         <div class="reveal">
-            <div class="sect-label">apply</div>
-            <h2>tell me about <strong>your trading.</strong></h2>
-        </div>
-
-        <div class="apply-grid">
-            <div class="reveal">
-                <p class="apply-lead">bespoke builds start at $500. delivery in 5–7 business days. fully open-source Pine Script — you own the code.</p>
-                <div class="apply-quote">
-                    this isn't a checkout page. the form gives me what i need to understand your situation and scope the build. if it's a good fit, i'll respond within 48 hours with a plan.
-                    <span class="sig">— noah</span>
-                </div>
+            <p class="apply-lead">bespoke builds start at $500. delivery in 5–7 business days. fully open-source Pine Script — you own the code.</p>
+            <div class="apply-quote">
+                this isn't a checkout page. the form gives me what i need to understand your situation and scope the build. if it's a good fit, i'll respond within 48 hours with a plan.
+                <span class="sig">— noah</span>
             </div>
-
-            <form class="form reveal" action="https://formsubmit.co/noah@malloylabs.net" method="POST">
-                <input type="hidden" name="_subject" value="New build application — malloylabs.net">
-                <input type="hidden" name="_captcha" value="true">
-                <input type="hidden" name="_template" value="table">
-
-                <label for="name">name / handle</label>
-                <input type="text" id="name" name="name" placeholder="your name or twitter handle" required>
-
-                <label for="email">email</label>
-                <input type="email" id="email" name="email" placeholder="you@email.com" required>
-
-                <label for="pairs">what pairs do you trade?</label>
-                <input type="text" id="pairs" name="pairs" placeholder="e.g. BTC/USDT, ETH/USDT, PEPE, SOL perps" required>
-
-                <label for="capital">approximate capital size</label>
-                <select id="capital" name="capital" required>
-                    <option value="">select range</option>
-                    <option value="under-5k">under $5k</option>
-                    <option value="5k-25k">$5k – $25k</option>
-                    <option value="25k-100k">$25k – $100k</option>
-                    <option value="100k-plus">$100k+</option>
-                    <option value="prefer-not-to-say">prefer not to say</option>
-                </select>
-
-                <label for="problem">what's the recurring problem you're trying to solve?</label>
-                <textarea id="problem" name="problem" placeholder="bad entries, overriding signals, no system at all, position sizing, missing reversals — whatever it is, be honest. that's how this works." required></textarea>
-
-                <button class="submit-btn" type="submit">submit application →</button>
-            </form>
         </div>
-    </section>
+        <form class="form reveal" action="https://formsubmit.co/noah@malloylabs.net" method="POST">
+            <input type="hidden" name="_subject" value="New build application — malloylabs.net">
+            <input type="hidden" name="_captcha" value="true">
+            <input type="hidden" name="_template" value="table">
+
+            <label for="name">name / handle</label>
+            <input type="text" id="name" name="name" placeholder="your name or twitter handle" required>
+
+            <label for="email">email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required>
+
+            <label for="timeframe">what timeframe do you actually trade on?</label>
+            <select id="timeframe" name="timeframe" required>
+                <option value="">select timeframe</option>
+                <option value="scalp">scalp (sub-15m)</option>
+                <option value="intraday">intraday (15m–4h)</option>
+                <option value="swing">swing (daily–weekly)</option>
+                <option value="position">position (weekly+)</option>
+                <option value="mixed">mixed</option>
+            </select>
+
+            <label for="chart">show me your chart</label>
+            <input type="text" id="chart" name="chart" placeholder="tradingview layout link, or your x handle and i'll pull a recent chart" required>
+
+            <label for="function">what's the one thing this build needs to do?</label>
+            <select id="function" name="function" required>
+                <option value="">pick one</option>
+                <option value="entry-timing">help me time entries better</option>
+                <option value="exit-validation">tell me when to exit</option>
+                <option value="thesis-confirmation">confirm a thesis i already have</option>
+                <option value="liquidity-detection">detect liquidity / sweeps / traps</option>
+                <option value="regime-id">identify what regime the market is in</option>
+                <option value="risk-gating">gate me out of trades i shouldn't take</option>
+                <option value="other">other (explain below)</option>
+            </select>
+
+            <label for="problem">what have you tried, and why didn't it work?</label>
+            <textarea id="problem" name="problem" placeholder="indicators, tools, setups. what broke for you. what's been frustrating. be honest — this tells me more than what you want." required></textarea>
+
+            <label for="budget">if this build did exactly what you wanted, what would it be worth to you?</label>
+            <select id="budget" name="budget" required>
+                <option value="">select range</option>
+                <option value="under-250">under $250</option>
+                <option value="250-500">$250 – $500</option>
+                <option value="500-1000">$500 – $1000</option>
+                <option value="1000-plus">$1000+</option>
+                <option value="free-beta">free beta — happy to write a public results post</option>
+            </select>
+
+            <button class="submit-btn" type="submit">submit application →</button>
+        </form>
+    </div>
+</section>
 
     <!-- FOOTER CTA -->
     <div class="footer-cta reveal">
