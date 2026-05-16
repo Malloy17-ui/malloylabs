@@ -356,174 +356,6 @@
             line-height: 1.6;
         }
 
-        /* ============ ENTRY POINT (MAPPER) ============ */
-        .entry-section {
-            padding-top: var(--sect-pad);
-        }
-
-        .entry-header {
-            text-align: center;
-            max-width: 720px;
-            margin: 0 auto 4rem;
-        }
-
-        .entry-header .sect-label {
-            margin-bottom: 1.5rem;
-        }
-
-        .entry-subhead {
-            color: var(--text-dim);
-            font-size: 1.05rem;
-            margin-top: 1.5rem;
-        }
-
-        .entry-card {
-            max-width: 640px;
-            margin: 0 auto 4.5rem;
-            background: linear-gradient(180deg, var(--surface-2), var(--surface));
-            border: 1px solid var(--accent-border);
-            border-radius: 6px;
-            padding: 2.5rem 2.5rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .entry-card::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-        }
-
-        .entry-card-lead {
-            color: var(--text);
-            font-size: 1rem;
-            line-height: 1.65;
-            margin-bottom: 2rem;
-        }
-
-        .entry-includes {
-            list-style: none;
-            margin: 0 0 2rem 0;
-            padding: 1.5rem 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .entry-includes li {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--text-dim);
-            padding: 0.45rem 0;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .entry-includes li::before {
-            content: "+";
-            color: var(--accent);
-            margin-right: 0.8rem;
-            font-weight: 500;
-        }
-
-        .entry-price-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 1.5rem;
-        }
-
-        .entry-price {
-            font-family: var(--font-sans);
-            font-size: 2.4rem;
-            font-weight: 700;
-            color: var(--text);
-            letter-spacing: -0.02em;
-        }
-
-        .entry-price-note {
-            font-family: var(--font-mono);
-            font-size: 0.75rem;
-            color: var(--text-dimmer);
-        }
-
-        .buy-btn {
-            display: block;
-            width: 100%;
-            padding: 1.1rem 2rem;
-            background: var(--accent);
-            color: #0a0a10;
-            border: none;
-            border-radius: 4px;
-            font-family: var(--font-mono);
-            font-size: 0.95rem;
-            font-weight: 500;
-            cursor: pointer;
-            text-align: center;
-            transition: all 0.2s ease;
-            letter-spacing: 0.01em;
-        }
-        .buy-btn:hover {
-            background: #b79bff;
-            transform: translateY(-1px);
-        }
-
-        .entry-social-label {
-            font-family: var(--font-mono);
-            font-size: 0.78rem;
-            color: var(--accent);
-            letter-spacing: 0.04em;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .testimonials {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .testimonial {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 0.5rem;
-            overflow: hidden;
-        }
-
-        .testimonial img {
-            border-radius: 3px;
-            width: 100%;
-            height: auto;
-        }
-
-        .demo-frame {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            padding: 0.75rem;
-        }
-
-        .demo-frame img {
-            border-radius: 3px;
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .demo-caption {
-            font-family: var(--font-mono);
-            font-size: 0.72rem;
-            color: var(--text-dim);
-            margin-top: 0.9rem;
-            padding: 0 0.5rem;
-        }
-
         /* ============ HOW IT WORKS ============ */
         .process-grid {
             display: grid;
@@ -768,9 +600,6 @@
             .testimonials {
                 grid-template-columns: 1fr;
             }
-            .entry-card {
-                padding: 2rem 1.5rem;
-            }
             .hero-foot {
                 flex-direction: column;
                 align-items: flex-start;
@@ -781,7 +610,6 @@
         @media (max-width: 540px) {
             h1 { font-size: 2rem; }
             h2 { font-size: 1.7rem; }
-            .entry-price { font-size: 2rem; }
         }
     </style>
 </head>
@@ -925,43 +753,6 @@
                 <div class="testimonial">
                     <img src="testimonial-2.png" alt="TrapDefi — test trade executed flawlessly, +29.60% BTC long position">
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="sep"><hr></div>
-
-    <!-- ENTRY POINT (MAPPER) -->
-    <section class="entry-section" id="mapper">
-        <div class="entry-header reveal">
-            <div class="sect-label">entry point</div>
-            <h2>one tool, <strong>off the shelf.</strong></h2>
-            <p class="entry-subhead">before you commission a bespoke build — try the work.</p>
-        </div>
-
-        <div class="entry-card reveal">
-            <p class="entry-card-lead">the <strong>liquidity sweep mapper v2</strong> is the one build general enough to ship as-is. same code behind every public trade on @MalloyAlgos. maps active sweep zones, swept levels, and trend state in real time — trades the sweep rather than the level.</p>
-
-            <ul class="entry-includes">
-                <li>full Pine Script v5 source (.txt)</li>
-                <li>setup &amp; configuration readme</li>
-                <li>open-source — yours to modify</li>
-                <li>tested and deployed across crypto pairs</li>
-            </ul>
-
-            <div class="entry-price-row">
-                <div class="entry-price">$49.99</div>
-                <div class="entry-price-note">one-time · delivered to email</div>
-            </div>
-
-            <a class="buy-btn" href="https://buy.stripe.com/00wcN56Aicrscda3TNb7y04" target="_blank" rel="noopener">buy — $49.99 →</a>
-        </div>
-
-        <div class="reveal">
-            <div class="entry-social-label">live on chart →</div>
-            <div class="demo-frame">
-                <img src="mapper-demo.png" alt="Liquidity Sweep Mapper v2 running on BTCUSD 2H — showing active sweep zones, EMA levels, SELL signal, and the live status panel">
-                <div class="demo-caption">BTCUSD · 2H · mapper running live</div>
             </div>
         </div>
     </section>
